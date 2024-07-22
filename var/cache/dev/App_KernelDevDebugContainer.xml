@@ -325,13 +325,6 @@
         <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RegistrationController"/>
       </call>
     </service>
-    <service id="App\Controller\UserController" class="App\Controller\UserController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.8FV7jiY.App\Controller\UserController"/>
-      </call>
-    </service>
     <service id="App\Form\AcceuilType" class="App\Form\AcceuilType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -379,7 +372,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.q_3pZok"/>
+      <argument type="service" id=".service_locator.IjBk567"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -1790,7 +1783,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.q_3pZok"/>
+      <argument type="service" id=".service_locator.IjBk567"/>
     </service>
     <service id="routing.resolver" class="Symfony\Component\Config\Loader\LoaderResolver">
       <call method="addLoader">
@@ -4874,9 +4867,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AcceuilType" class="App\Form\AcceuilType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AcceuilType" class="App\Form\AcceuilType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EvenementType" class="App\Form\EvenementType" autowire="true" abstract="true"/>
@@ -5567,56 +5557,7 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.DQcw8Me" method="withContext"/>
     </service>
-    <service id=".service_locator.bTA9FKH" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.bTA9FKH.App\Controller\UserController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\UserController::index()"/>
-      <argument>App\Controller\UserController::index()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.bTA9FKH" method="withContext"/>
-    </service>
-    <service id=".service_locator.P.blNFL.App\Controller\UserController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\UserController::new()"/>
-      <argument>App\Controller\UserController::new()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.P.blNFL" method="withContext"/>
-    </service>
-    <service id=".service_locator.hKA2je_" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="user" type="service_closure" id=".errored..service_locator.hKA2je_.App\Entity\User"/>
-      </argument>
-    </service>
-    <service id=".service_locator.hKA2je_.App\Controller\UserController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\UserController::show()"/>
-      <argument>App\Controller\UserController::show()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.hKA2je_" method="withContext"/>
-    </service>
-    <service id=".service_locator.q60ydOj" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-        <argument key="user" type="service_closure" id=".errored..service_locator.q60ydOj.App\Entity\User"/>
-      </argument>
-    </service>
-    <service id=".service_locator.q60ydOj.App\Controller\UserController::edit()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\UserController::edit()"/>
-      <argument>App\Controller\UserController::edit()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.q60ydOj" method="withContext"/>
-    </service>
-    <service id=".service_locator.q60ydOj.App\Controller\UserController::delete()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\UserController::delete()"/>
-      <argument>App\Controller\UserController::delete()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.q60ydOj" method="withContext"/>
-    </service>
-    <service id=".service_locator.q_3pZok" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IjBk567" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AcceuilController::delete" type="service_closure" id=".service_locator.Vv3rbHE.App\Controller\AcceuilController::delete()"/>
@@ -5632,11 +5573,6 @@
         <argument key="App\Controller\LoginController::index" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::index()"/>
         <argument key="App\Controller\LoginController::logOut" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::logOut()"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.DQcw8Me.App\Controller\RegistrationController::register()"/>
-        <argument key="App\Controller\UserController::delete" type="service_closure" id=".service_locator.q60ydOj.App\Controller\UserController::delete()"/>
-        <argument key="App\Controller\UserController::edit" type="service_closure" id=".service_locator.q60ydOj.App\Controller\UserController::edit()"/>
-        <argument key="App\Controller\UserController::index" type="service_closure" id=".service_locator.bTA9FKH.App\Controller\UserController::index()"/>
-        <argument key="App\Controller\UserController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\UserController::new()"/>
-        <argument key="App\Controller\UserController::show" type="service_closure" id=".service_locator.hKA2je_.App\Controller\UserController::show()"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
@@ -5654,11 +5590,6 @@
         <argument key="App\Controller\LoginController:index" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::index()"/>
         <argument key="App\Controller\LoginController:logOut" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::logOut()"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.DQcw8Me.App\Controller\RegistrationController::register()"/>
-        <argument key="App\Controller\UserController:delete" type="service_closure" id=".service_locator.q60ydOj.App\Controller\UserController::delete()"/>
-        <argument key="App\Controller\UserController:edit" type="service_closure" id=".service_locator.q60ydOj.App\Controller\UserController::edit()"/>
-        <argument key="App\Controller\UserController:index" type="service_closure" id=".service_locator.bTA9FKH.App\Controller\UserController::index()"/>
-        <argument key="App\Controller\UserController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\UserController::new()"/>
-        <argument key="App\Controller\UserController:show" type="service_closure" id=".service_locator.hKA2je_.App\Controller\UserController::show()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
       </argument>
@@ -5867,12 +5798,6 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.8FV7jiY" method="withContext"/>
     </service>
-    <service id=".service_locator.8FV7jiY.App\Controller\UserController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\UserController"/>
-      <argument>App\Controller\UserController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.8FV7jiY" method="withContext"/>
-    </service>
     <service id=".service_locator.JI6krIU" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6015,7 +5940,6 @@
           <argument>App\Controller\EvenementController</argument>
           <argument>App\Controller\LoginController</argument>
           <argument>App\Controller\RegistrationController</argument>
-          <argument>App\Controller\UserController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
       </call>
@@ -6073,12 +5997,6 @@
     </service>
     <service id=".errored..service_locator.sMofYe0.App\Entity\Evenement" class="App\Entity\Evenement">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.sMofYe0&quot;: it needs an instance of &quot;App\Entity\Evenement&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
-    </service>
-    <service id=".errored..service_locator.hKA2je_.App\Entity\User" class="App\Entity\User">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.hKA2je_&quot;: it needs an instance of &quot;App\Entity\User&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
-    </service>
-    <service id=".errored..service_locator.q60ydOj.App\Entity\User" class="App\Entity\User">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.q60ydOj&quot;: it needs an instance of &quot;App\Entity\User&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
@@ -6973,7 +6891,7 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.1W6W_dF" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.q_3pZok"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.IjBk567"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -6999,9 +6917,6 @@
     <service id=".service_locator...2Ndi3" alias=".service_locator.mXDaS5b"/>
     <service id=".service_locator.01GVI_m" alias=".service_locator.uBR2pyw"/>
     <service id=".service_locator.tF4bEJS" alias=".service_locator.DQcw8Me"/>
-    <service id=".service_locator.qIDYkpc" alias=".service_locator.bTA9FKH"/>
-    <service id=".service_locator.MaqvS4." alias=".service_locator.hKA2je_"/>
-    <service id=".service_locator._yF7Wyx" alias=".service_locator.q60ydOj"/>
     <service id=".service_locator.cGvJM19" alias=".service_locator.8FV7jiY"/>
   </services>
 </container>
