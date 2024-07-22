@@ -40,3 +40,6 @@ e4686f,172.23.0.1,GET,https://localhost:8002/,1721458935,,404,request
 1e939d,172.23.0.1,GET,https://localhost:8002/,1721634158,,404,request
 d994e0,172.23.0.1,GET,https://localhost:8002/register?url=register,1721634633,cdc6de,500,request
 cdc6de,172.23.0.1,GET,https://localhost:8002/register?url=register,1721634633,,500,request
+c8e4dd,172.23.0.1,GET,https://localhost:8002/login?url=login,1721641312,,200,request
+5a4119,172.23.0.1,GET,https://localhost:8002/register?url=register,1721641317,5655cf,500,request
+5655cf,172.23.0.1,GET,https://localhost:8002/register?url=register,1721641317,,500,request
