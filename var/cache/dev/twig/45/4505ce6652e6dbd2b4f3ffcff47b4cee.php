@@ -66,7 +66,7 @@ class __TwigTemplate_8b036070f5f37c405adf23d2837e31ea extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield " Se connecter au Livre Jeu";
+        yield " Se connecter ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -151,7 +151,7 @@ class __TwigTemplate_8b036070f5f37c405adf23d2837e31ea extends Template
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
-{% block title %} Se connecter au Livre Jeu{% endblock %}
+{% block title %} Se connecter {% endblock %}
 
 {% block body %}
     {% if error %}

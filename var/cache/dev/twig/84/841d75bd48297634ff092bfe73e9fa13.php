@@ -100,7 +100,7 @@ class __TwigTemplate_fccb5dc02cc32c5815c5f58bb9c51c30 extends Template
         yield "
         ";
         // line 11
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 11, $this->source); })()), "username", [], "any", false, false, false, 11), 'row');
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 11, $this->source); })()), "email", [], "any", false, false, false, 11), 'row');
         yield "
         ";
         // line 12
@@ -163,7 +163,7 @@ class __TwigTemplate_fccb5dc02cc32c5815c5f58bb9c51c30 extends Template
     {{ form_errors(registrationForm) }}
 
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
         }) }}

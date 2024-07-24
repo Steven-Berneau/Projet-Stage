@@ -66,7 +66,8 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello HomeController!";
+        yield "Jess'Poke - Accueil
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -76,7 +77,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         return; yield '';
     }
 
-    // line 5
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -86,24 +87,39 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        yield "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        // line 7
+        yield "
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        yield "! ✅</h1>
+\t";
+        // line 9
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 10
+            yield "
+\t\t<p>Email: ";
+            // line 11
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11), "email", [], "any", false, false, false, 11), "html", null, true);
+            yield "</p>
+\t\t<div class=\"col d-flex align-items-center justify-content-center\">
+\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"";
+            // line 13
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            yield "\">Se déconnecter</a>
+\t\t</div>
+\t\t";
+        } else {
+            // line 16
+            yield "\t\t<div class=\"col d-flex align-items-center justify-content-center\">
+\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"";
+            // line 17
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            yield "\">Se connecter</a>
+\t\t</div>
+\t\t";
+        }
+        // line 19
+        yield " 
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/steven/Projet-Stage/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>/home/steven/Projet-Stage/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -135,31 +151,32 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  98 => 12,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  120 => 19,  114 => 17,  111 => 16,  105 => 13,  100 => 11,  97 => 10,  95 => 9,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Jess'Poke - Accueil
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/steven/Projet-Stage/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>/home/steven/Projet-Stage/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
-{% endblock %}
-", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
+\t{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+\t\t<p>Email: {{app.user.email}}</p>
+\t\t<div class=\"col d-flex align-items-center justify-content-center\">
+\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"{{path('app_logout')}}\">Se déconnecter</a>
+\t\t</div>
+\t\t{% else %}
+\t\t<div class=\"col d-flex align-items-center justify-content-center\">
+\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"{{path('app_login')}}\">Se connecter</a>
+\t\t</div>
+\t\t{% endif %} 
+
+
+{% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
     }
 }

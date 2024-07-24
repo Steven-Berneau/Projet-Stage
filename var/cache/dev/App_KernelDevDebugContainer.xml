@@ -290,13 +290,6 @@
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
-    <service id="App\Controller\AcceuilController" class="App\Controller\AcceuilController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.8FV7jiY.App\Controller\AcceuilController"/>
-      </call>
-    </service>
     <service id="App\Controller\AdminController" class="App\Controller\AdminController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -309,6 +302,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.8FV7jiY.App\Controller\EvenementController"/>
+      </call>
+    </service>
+    <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.8FV7jiY.App\Controller\HomeController"/>
       </call>
     </service>
     <service id="App\Controller\LoginController" class="App\Controller\LoginController" public="true" autowire="true" autoconfigure="true">
@@ -325,9 +325,6 @@
         <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RegistrationController"/>
       </call>
     </service>
-    <service id="App\Form\AcceuilType" class="App\Form\AcceuilType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
     <service id="App\Form\EvenementType" class="App\Form\EvenementType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -336,10 +333,6 @@
     </service>
     <service id="App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
-    </service>
-    <service id="App\Repository\AcceuilRepository" class="App\Repository\AcceuilRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\EvenementRepository" class="App\Repository\EvenementRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -372,7 +365,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.IjBk567"/>
+      <argument type="service" id=".service_locator.xybBYQ9"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -976,7 +969,6 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
-        <argument>App\Form\AcceuilType</argument>
         <argument>App\Form\EvenementType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\UserType</argument>
@@ -1783,7 +1775,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.IjBk567"/>
+      <argument type="service" id=".service_locator.xybBYQ9"/>
     </service>
     <service id="routing.resolver" class="Symfony\Component\Config\Loader\LoaderResolver">
       <call method="addLoader">
@@ -2116,7 +2108,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.ExmqRG0"/>
+      <argument type="service" id=".service_locator.i9.baU_"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3248,7 +3240,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.Yz0nCuB"/>
+      <argument type="service" id=".service_locator..AGRs5d"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4180,23 +4172,16 @@
     </service>
     <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
       <call method="add">
-        <argument type="service" id=".security.request_matcher.7hffHUr"/>
+        <argument type="service" id=".security.request_matcher.oRezac7"/>
         <argument type="collection">
-          <argument>PUBLIC_ACCESS</argument>
+          <argument>ROLE_ADMIN</argument>
         </argument>
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id=".security.request_matcher.BhpRUZK"/>
+        <argument type="service" id=".security.request_matcher.hOHwA17"/>
         <argument type="collection">
-          <argument>PUBLIC_ACCESS</argument>
-        </argument>
-        <argument>null</argument>
-      </call>
-      <call method="add">
-        <argument type="service" id=".security.request_matcher.0tMb.ud"/>
-        <argument type="collection">
-          <argument>IS_AUTHENTICATED_FULLY</argument>
+          <argument>ROLE_USER</argument>
         </argument>
         <argument>null</argument>
       </call>
@@ -4733,28 +4718,20 @@
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.LORg6t3" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/register</argument>
+    <service id=".security.request_matcher.RHeAWV6" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>/admin</argument>
     </service>
-    <service id=".security.request_matcher.7hffHUr" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.oRezac7" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.LORg6t3"/>
+        <argument type="service" id=".security.request_matcher.RHeAWV6"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.T8BdVIN" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/login</argument>
+    <service id=".security.request_matcher.HoN7aZt" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>/user</argument>
     </service>
-    <service id=".security.request_matcher.BhpRUZK" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.hOHwA17" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.T8BdVIN"/>
-      </argument>
-    </service>
-    <service id=".security.request_matcher.3qgJVJN" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/api</argument>
-    </service>
-    <service id=".security.request_matcher.0tMb.ud" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
-      <argument type="collection">
-        <argument type="service" id=".security.request_matcher.3qgJVJN"/>
+        <argument type="service" id=".security.request_matcher.HoN7aZt"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
@@ -4852,31 +4829,27 @@
       <argument type="service" id="symfonycasts.verify_email.token_generator"/>
       <argument>3600</argument>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\AcceuilController" class="App\Controller\AcceuilController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EvenementController" class="App\Controller\EvenementController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EvenementController" class="App\Controller\EvenementController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\EvenementController" class="App\Controller\EvenementController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AcceuilType" class="App\Form\AcceuilType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\AcceuilType" class="App\Form\AcceuilType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EvenementType" class="App\Form\EvenementType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\EvenementType" class="App\Form\EvenementType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AcceuilRepository" class="App\Repository\AcceuilRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\AcceuilRepository" class="App\Repository\AcceuilRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EvenementRepository" class="App\Repository\EvenementRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\EvenementRepository" class="App\Repository\EvenementRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
@@ -5415,61 +5388,6 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.4wc4Ag1" method="withContext"/>
     </service>
-    <service id=".service_locator.D1r9Q3." class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="acceuilRepository" type="service_closure" id="App\Repository\AcceuilRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.D1r9Q3..App\Controller\AcceuilController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AcceuilController::index()"/>
-      <argument>App\Controller\AcceuilController::index()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.D1r9Q3." method="withContext"/>
-    </service>
-    <service id=".service_locator.P.blNFL" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
-    <service id=".service_locator.P.blNFL.App\Controller\AcceuilController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AcceuilController::new()"/>
-      <argument>App\Controller\AcceuilController::new()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.P.blNFL" method="withContext"/>
-    </service>
-    <service id=".service_locator.wQtEMKU" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="acceuil" type="service_closure" id=".errored..service_locator.wQtEMKU.App\Entity\Acceuil"/>
-      </argument>
-    </service>
-    <service id=".service_locator.wQtEMKU.App\Controller\AcceuilController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AcceuilController::show()"/>
-      <argument>App\Controller\AcceuilController::show()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.wQtEMKU" method="withContext"/>
-    </service>
-    <service id=".service_locator.Vv3rbHE" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="acceuil" type="service_closure" id=".errored..service_locator.Vv3rbHE.App\Entity\Acceuil"/>
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
-    <service id=".service_locator.Vv3rbHE.App\Controller\AcceuilController::edit()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AcceuilController::edit()"/>
-      <argument>App\Controller\AcceuilController::edit()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.Vv3rbHE" method="withContext"/>
-    </service>
-    <service id=".service_locator.Vv3rbHE.App\Controller\AcceuilController::delete()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AcceuilController::delete()"/>
-      <argument>App\Controller\AcceuilController::delete()</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.Vv3rbHE" method="withContext"/>
-    </service>
     <service id=".service_locator.l6hZplE" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5481,6 +5399,12 @@
       <argument>App\Controller\EvenementController::index()</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l6hZplE" method="withContext"/>
+    </service>
+    <service id=".service_locator.P.blNFL" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
     </service>
     <service id=".service_locator.P.blNFL.App\Controller\EvenementController::new()" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\EvenementController::new()"/>
@@ -5557,14 +5481,9 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.DQcw8Me" method="withContext"/>
     </service>
-    <service id=".service_locator.IjBk567" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.xybBYQ9" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\AcceuilController::delete" type="service_closure" id=".service_locator.Vv3rbHE.App\Controller\AcceuilController::delete()"/>
-        <argument key="App\Controller\AcceuilController::edit" type="service_closure" id=".service_locator.Vv3rbHE.App\Controller\AcceuilController::edit()"/>
-        <argument key="App\Controller\AcceuilController::index" type="service_closure" id=".service_locator.D1r9Q3..App\Controller\AcceuilController::index()"/>
-        <argument key="App\Controller\AcceuilController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\AcceuilController::new()"/>
-        <argument key="App\Controller\AcceuilController::show" type="service_closure" id=".service_locator.wQtEMKU.App\Controller\AcceuilController::show()"/>
         <argument key="App\Controller\EvenementController::delete" type="service_closure" id=".service_locator.sMofYe0.App\Controller\EvenementController::delete()"/>
         <argument key="App\Controller\EvenementController::edit" type="service_closure" id=".service_locator.sMofYe0.App\Controller\EvenementController::edit()"/>
         <argument key="App\Controller\EvenementController::index" type="service_closure" id=".service_locator.l6hZplE.App\Controller\EvenementController::index()"/>
@@ -5577,11 +5496,6 @@
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
-        <argument key="App\Controller\AcceuilController:delete" type="service_closure" id=".service_locator.Vv3rbHE.App\Controller\AcceuilController::delete()"/>
-        <argument key="App\Controller\AcceuilController:edit" type="service_closure" id=".service_locator.Vv3rbHE.App\Controller\AcceuilController::edit()"/>
-        <argument key="App\Controller\AcceuilController:index" type="service_closure" id=".service_locator.D1r9Q3..App\Controller\AcceuilController::index()"/>
-        <argument key="App\Controller\AcceuilController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\AcceuilController::new()"/>
-        <argument key="App\Controller\AcceuilController:show" type="service_closure" id=".service_locator.wQtEMKU.App\Controller\AcceuilController::show()"/>
         <argument key="App\Controller\EvenementController:delete" type="service_closure" id=".service_locator.sMofYe0.App\Controller\EvenementController::delete()"/>
         <argument key="App\Controller\EvenementController:edit" type="service_closure" id=".service_locator.sMofYe0.App\Controller\EvenementController::edit()"/>
         <argument key="App\Controller\EvenementController:index" type="service_closure" id=".service_locator.l6hZplE.App\Controller\EvenementController::index()"/>
@@ -5671,10 +5585,9 @@
       <argument type="service" id="argument_resolver.query_parameter_value_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.ExmqRG0" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.i9.baU_" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Form\AcceuilType" type="service_closure" id="App\Form\AcceuilType"/>
         <argument key="App\Form\EvenementType" type="service_closure" id="App\Form\EvenementType"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
@@ -5695,10 +5608,9 @@
         <argument key="doctrine.orm.listeners.pdo_session_handler_schema_listener" type="service_closure" id="doctrine.orm.listeners.pdo_session_handler_schema_listener"/>
       </argument>
     </service>
-    <service id=".service_locator.Yz0nCuB" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator..AGRs5d" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Repository\AcceuilRepository" type="service_closure" id="App\Repository\AcceuilRepository"/>
         <argument key="App\Repository\EvenementRepository" type="service_closure" id="App\Repository\EvenementRepository"/>
         <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
@@ -5768,12 +5680,6 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.8FV7jiY.App\Controller\AcceuilController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AcceuilController"/>
-      <argument>App\Controller\AcceuilController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.8FV7jiY" method="withContext"/>
-    </service>
     <service id=".service_locator.8FV7jiY.App\Controller\AdminController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\AdminController"/>
       <argument>App\Controller\AdminController</argument>
@@ -5783,6 +5689,12 @@
     <service id=".service_locator.8FV7jiY.App\Controller\EvenementController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\EvenementController"/>
       <argument>App\Controller\EvenementController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.8FV7jiY" method="withContext"/>
+    </service>
+    <service id=".service_locator.8FV7jiY.App\Controller\HomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\HomeController"/>
+      <argument>App\Controller\HomeController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.8FV7jiY" method="withContext"/>
     </service>
@@ -5935,9 +5847,9 @@
       <call method="allowControllers">
         <argument type="collection">
           <argument>App\Kernel</argument>
-          <argument>App\Controller\AcceuilController</argument>
           <argument>App\Controller\AdminController</argument>
           <argument>App\Controller\EvenementController</argument>
+          <argument>App\Controller\HomeController</argument>
           <argument>App\Controller\LoginController</argument>
           <argument>App\Controller\RegistrationController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
@@ -5985,12 +5897,6 @@
     </service>
     <service id=".errored..service_locator.4wc4Ag1.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.4wc4Ag1&quot;: it needs an instance of &quot;Symfony\Component\Config\Loader\LoaderInterface&quot; but this type has been excluded from autowiring."/>
-    </service>
-    <service id=".errored..service_locator.wQtEMKU.App\Entity\Acceuil" class="App\Entity\Acceuil">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.wQtEMKU&quot;: it needs an instance of &quot;App\Entity\Acceuil&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
-    </service>
-    <service id=".errored..service_locator.Vv3rbHE.App\Entity\Acceuil" class="App\Entity\Acceuil">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.Vv3rbHE&quot;: it needs an instance of &quot;App\Entity\Acceuil&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
     <service id=".errored..service_locator.fcxQIzM.App\Entity\Evenement" class="App\Entity\Evenement">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.fcxQIzM&quot;: it needs an instance of &quot;App\Entity\Evenement&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
@@ -6891,7 +6797,7 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.1W6W_dF" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.IjBk567"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.xybBYQ9"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -6907,11 +6813,8 @@
     <service id="security.event_dispatcher.main" alias="debug.security.event_dispatcher.main"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.diNoEIK" alias=".service_locator.4wc4Ag1"/>
-    <service id=".service_locator.lC98v0i" alias=".service_locator.D1r9Q3."/>
-    <service id=".service_locator.4KsIGyf" alias=".service_locator.P.blNFL"/>
-    <service id=".service_locator.pls64bn" alias=".service_locator.wQtEMKU"/>
-    <service id=".service_locator.UO_aklP" alias=".service_locator.Vv3rbHE"/>
     <service id=".service_locator.1f9owjF" alias=".service_locator.l6hZplE"/>
+    <service id=".service_locator.4KsIGyf" alias=".service_locator.P.blNFL"/>
     <service id=".service_locator.9O_.k_5" alias=".service_locator.fcxQIzM"/>
     <service id=".service_locator.TGCEG9D" alias=".service_locator.sMofYe0"/>
     <service id=".service_locator...2Ndi3" alias=".service_locator.mXDaS5b"/>

@@ -14,11 +14,10 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/acceuil' => [[['_route' => 'app_acceuil_index', '_controller' => 'App\\Controller\\AcceuilController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/acceuil/new' => [[['_route' => 'app_acceuil_new', '_controller' => 'App\\Controller\\AcceuilController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin' => [[['_route' => 'app_admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
         '/evenement' => [[['_route' => 'app_evenement_index', '_controller' => 'App\\Controller\\EvenementController::index'], null, ['GET' => 0], null, true, false, null]],
         '/evenement/new' => [[['_route' => 'app_evenement_new', '_controller' => 'App\\Controller\\EvenementController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/home' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\LoginController::logOut'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
@@ -43,15 +42,10 @@ return [
                         .')'
                     .')'
                 .')'
-                .'|/acceuil/([^/]++)(?'
-                    .'|(*:222)'
-                    .'|/edit(*:235)'
-                    .'|(*:243)'
-                .')'
                 .'|/evenement/([^/]++)(?'
-                    .'|(*:274)'
-                    .'|/edit(*:287)'
-                    .'|(*:295)'
+                    .'|(*:224)'
+                    .'|/edit(*:237)'
+                    .'|(*:245)'
                 .')'
             .')/?$}sDu',
     ],
@@ -64,12 +58,9 @@ return [
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        222 => [[['_route' => 'app_acceuil_show', '_controller' => 'App\\Controller\\AcceuilController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        235 => [[['_route' => 'app_acceuil_edit', '_controller' => 'App\\Controller\\AcceuilController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        243 => [[['_route' => 'app_acceuil_delete', '_controller' => 'App\\Controller\\AcceuilController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        274 => [[['_route' => 'app_evenement_show', '_controller' => 'App\\Controller\\EvenementController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        287 => [[['_route' => 'app_evenement_edit', '_controller' => 'App\\Controller\\EvenementController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        295 => [
+        224 => [[['_route' => 'app_evenement_show', '_controller' => 'App\\Controller\\EvenementController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        237 => [[['_route' => 'app_evenement_edit', '_controller' => 'App\\Controller\\EvenementController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        245 => [
             [['_route' => 'app_evenement_delete', '_controller' => 'App\\Controller\\EvenementController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
