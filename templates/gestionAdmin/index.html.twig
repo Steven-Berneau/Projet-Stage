@@ -4,6 +4,9 @@
 
 {% block body %}
     <h1 class="col d-flex align-items-center justify-content-center link-light text-decoration-underline">Menu de gestion des évènements</h1>
+    <h2 class="d-grid gap-2 d-md-flex justify-content">
+        <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_admin') }}">Menu admin</a>
+    </h2>
 
     <table class="table">
         <thead>
@@ -28,7 +31,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="4" class="link-light fst-italic-bold">Aucun évènement trouvé</td>
+                <td colspan="4" class="link-light fst-italic ">Aucun évènement trouvé</td>
             </tr>
         {% endfor %}
         </tbody>

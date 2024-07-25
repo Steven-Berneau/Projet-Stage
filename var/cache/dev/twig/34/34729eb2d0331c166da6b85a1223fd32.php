@@ -88,33 +88,30 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        yield "
-
-\t";
-        // line 9
+        yield "    \t";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 10
+            // line 8
             yield "
-\t\t<nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
+\t\t<nav class=\"navbar navbar-expand-lg bg-light\">
   <div class=\"container-fluid\">
   <img id=\"logo\">
-    <a class=\"navbar-brand\" href=\"";
-            // line 14
+    <a class=\"navbar-brand link-primary fw-bold\" href=\"";
+            // line 12
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
             yield "\">Accueil</a>
     <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
       <span class=\"navbar-toggler-icon\"></span>
     </button>
-    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+    <div class=\"collapse navbar-collapse link-primary \" id=\"navbarSupportedContent\">
       <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
         <li class=\"nav-item\">
-          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Salon</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Salon</a>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Portfolio</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Portfolio</a>
         </li>
         <li class=\"nav-item dropdown\">
-          <a class=\"nav-link active dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
+          <a class=\"nav-link active dropdown-toggle link-primary fst-italic\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
             Evènements
           </a>
           <ul class=\"dropdown-menu\">
@@ -125,35 +122,50 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
           </ul>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link disabled\" aria-disabled=\"true\">Disabled</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Contact</a>
         </li>
-      </ul>
+        ";
+            // line 41
+            yield "      </ul>
       <form class=\"d-flex\" role=\"search\">
         <input class=\"form-control me-2\" type=\"search\" placeholder=\"Rechercher\" aria-label=\"Search\">
-        <button class=\"btn btn-outline-light\" type=\"submit\">Rechercher</button>
+        <button class=\"link-primary btn btn-outline-primary\" type=\"submit\">Rechercher</button>
       </form>
     </div>
   </div>
   <div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-light btn btn-primary \" href=\"";
-            // line 48
+\t\t<a class=\"link-primary btn btn-primary bg-light\" href=\"";
+            // line 49
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            yield "\">Se déconnecter</a>
+            yield "\">Déconnexion</a>
 \t\t</div>
 \t\t";
         } else {
-            // line 51
-            yield "\t\t<div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-secondary btn btn-primary\" href=\"";
             // line 52
+            yield "\t\t<div class=\"col d-flex align-items-center justify-content-center\">
+\t\t<a class=\"link-secondary btn btn-primary bg-light\" href=\"";
+            // line 53
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            yield "\">Se connecter</a>
+            yield "\">Connexion</a>
 \t\t</div>
 \t\t";
         }
-        // line 55
-        yield "</nav>
-\t\t
+        // line 56
+        yield "    ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 57
+            yield "    <div class=\"d-grid gap-2 d-md-flex justify-content\">
+        <a class=\"link-primary fw-bold btn bg-light\" href=\"";
+            // line 58
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin");
+            yield "\"><img id=\"Admin\"></a>
+    </div>
+";
+        }
+        // line 61
+        yield "       
+</nav>
+
 
 ";
         
@@ -186,7 +198,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  155 => 55,  149 => 52,  146 => 51,  140 => 48,  103 => 14,  97 => 10,  95 => 9,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  166 => 61,  160 => 58,  157 => 57,  154 => 56,  148 => 53,  145 => 52,  139 => 49,  129 => 41,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -197,27 +209,25 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
 {% endblock %}
 
 {% block body %}
+    \t{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-
-\t{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-
-\t\t<nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
+\t\t<nav class=\"navbar navbar-expand-lg bg-light\">
   <div class=\"container-fluid\">
   <img id=\"logo\">
-    <a class=\"navbar-brand\" href=\"{{path('app_home')}}\">Accueil</a>
+    <a class=\"navbar-brand link-primary fw-bold\" href=\"{{path('app_home')}}\">Accueil</a>
     <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
       <span class=\"navbar-toggler-icon\"></span>
     </button>
-    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+    <div class=\"collapse navbar-collapse link-primary \" id=\"navbarSupportedContent\">
       <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
         <li class=\"nav-item\">
-          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Salon</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Salon</a>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Portfolio</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Portfolio</a>
         </li>
         <li class=\"nav-item dropdown\">
-          <a class=\"nav-link active dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
+          <a class=\"nav-link active dropdown-toggle link-primary fst-italic\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
             Evènements
           </a>
           <ul class=\"dropdown-menu\">
@@ -228,25 +238,34 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
           </ul>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link disabled\" aria-disabled=\"true\">Disabled</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Contact</a>
         </li>
+        {# <li class=\"nav-item\">
+          <a class=\"nav-link disabled\" aria-disabled=\"true\">Disabled</a>
+        </li> #}
       </ul>
       <form class=\"d-flex\" role=\"search\">
         <input class=\"form-control me-2\" type=\"search\" placeholder=\"Rechercher\" aria-label=\"Search\">
-        <button class=\"btn btn-outline-light\" type=\"submit\">Rechercher</button>
+        <button class=\"link-primary btn btn-outline-primary\" type=\"submit\">Rechercher</button>
       </form>
     </div>
   </div>
   <div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-light btn btn-primary \" href=\"{{path('app_logout')}}\">Se déconnecter</a>
+\t\t<a class=\"link-primary btn btn-primary bg-light\" href=\"{{path('app_logout')}}\">Déconnexion</a>
 \t\t</div>
 \t\t{% else %}
 \t\t<div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-secondary btn btn-primary\" href=\"{{path('app_login')}}\">Se connecter</a>
+\t\t<a class=\"link-secondary btn btn-primary bg-light\" href=\"{{path('app_login')}}\">Connexion</a>
 \t\t</div>
 \t\t{% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+    <div class=\"d-grid gap-2 d-md-flex justify-content\">
+        <a class=\"link-primary fw-bold btn bg-light\" href=\"{{ path('app_admin') }}\"><img id=\"Admin\"></a>
+    </div>
+{% endif %}
+       
 </nav>
-\t\t
+
 
 {% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
     }

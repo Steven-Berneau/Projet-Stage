@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Se connecter
+{% block title %}Connexion
 {% endblock %}
 
 {% block body %}
@@ -17,7 +17,7 @@
 		<input type="password" id="password" name="_password">
 		<input type="hidden" name="_csrf_token" value="{{csrf_token('authenticate')}}">
 
-		<button type="submit" class="link-secondary btn btn-primary">Login</button>
+		<button type="submit" class="link-secondary btn btn-primary">Se connecter</button>
 
 	</form>
 </div>

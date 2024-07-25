@@ -65,10 +65,11 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         // line 14
         yield "    </head>
     <body>
+
         ";
-        // line 16
-        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
         // line 17
+        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
+        // line 19
         yield "    </body>
 </html>
 ";
@@ -149,7 +150,7 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         return; yield '';
     }
 
-    // line 16
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -159,6 +160,8 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 18
+        yield "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -181,7 +184,7 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  153 => 16,  139 => 12,  129 => 11,  115 => 8,  105 => 7,  85 => 5,  72 => 17,  70 => 16,  66 => 14,  64 => 11,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  164 => 18,  154 => 17,  140 => 12,  130 => 11,  116 => 8,  106 => 7,  86 => 5,  73 => 19,  71 => 17,  66 => 14,  64 => 11,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -201,7 +204,9 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+        {% block body %}
+        {% endblock %}
     </body>
 </html>
 ", "base.html.twig", "/var/www/Projet-Stage/templates/base.html.twig");

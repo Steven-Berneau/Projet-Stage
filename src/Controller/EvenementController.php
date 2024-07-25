@@ -11,14 +11,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route('/evenement')]
+#[Route('/gestionAdmin')]
 class EvenementController extends AbstractController
 {
     #[Route('/', name: 'app_evenement_index', methods: ['GET'])]
     public function index(EvenementRepository $evenementRepository): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
-        return $this->render('evenement/index.html.twig', [
+        return $this->render('gestionAdmin/index.html.twig', [
             'evenements' => $evenementRepository->findAll(),
         ]);
     }
@@ -38,7 +38,7 @@ class EvenementController extends AbstractController
             return $this->redirectToRoute('app_evenement_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('evenement/new.html.twig', [
+        return $this->render('gestionAdmin/new.html.twig', [
             'evenement' => $evenement,
             'form' => $form,
         ]);
@@ -48,7 +48,7 @@ class EvenementController extends AbstractController
     public function show(Evenement $evenement): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
-        return $this->render('evenement/show.html.twig', [
+        return $this->render('gestionAdmin/show.html.twig', [
             'evenement' => $evenement,
         ]);
     }
@@ -66,7 +66,7 @@ class EvenementController extends AbstractController
             return $this->redirectToRoute('app_evenement_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('evenement/edit.html.twig', [
+        return $this->render('gestionAdmin/edit.html.twig', [
             'evenement' => $evenement,
             'form' => $form,
         ]);

@@ -4,27 +4,25 @@
 {% endblock %}
 
 {% block body %}
+    	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-
-	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
   <img id="logo">
-    <a class="navbar-brand" href="{{path('app_home')}}">Accueil</a>
+    <a class="navbar-brand link-primary fw-bold" href="{{path('app_home')}}">Accueil</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse link-primary " id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Salon</a>
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="#">Salon</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Portfolio</a>
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="#">Portfolio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-current="page">
+          <a class="nav-link active dropdown-toggle link-primary fst-italic" href="#" role="button" data-bs-toggle="dropdown" aria-current="page">
             Evènements
           </a>
           <ul class="dropdown-menu">
@@ -35,24 +33,33 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="#">Contact</a>
         </li>
+        {# <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> #}
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Rechercher</button>
+        <button class="link-primary btn btn-outline-primary" type="submit">Rechercher</button>
       </form>
     </div>
   </div>
   <div class="col d-flex align-items-center justify-content-center">
-		<a class="link-light btn btn-primary " href="{{path('app_logout')}}">Se déconnecter</a>
+		<a class="link-primary btn btn-primary bg-light" href="{{path('app_logout')}}">Déconnexion</a>
 		</div>
 		{% else %}
 		<div class="col d-flex align-items-center justify-content-center">
-		<a class="link-secondary btn btn-primary" href="{{path('app_login')}}">Se connecter</a>
+		<a class="link-secondary btn btn-primary bg-light" href="{{path('app_login')}}">Connexion</a>
 		</div>
 		{% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+    <div class="d-grid gap-2 d-md-flex justify-content">
+        <a class="link-primary fw-bold btn bg-light" href="{{ path('app_admin') }}"><img id="Admin"></a>
+    </div>
+{% endif %}
+       
 </nav>
-		
+
 
 {% endblock %}

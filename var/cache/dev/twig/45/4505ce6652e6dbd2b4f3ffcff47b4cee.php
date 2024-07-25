@@ -66,7 +66,7 @@ class __TwigTemplate_8b036070f5f37c405adf23d2837e31ea extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Se connecter
+        yield "Connexion
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -116,7 +116,7 @@ class __TwigTemplate_8b036070f5f37c405adf23d2837e31ea extends Template
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         yield "\">
 
-\t\t<button type=\"submit\" class=\"link-secondary btn btn-primary\">Login</button>
+\t\t<button type=\"submit\" class=\"link-secondary btn btn-primary\">Se connecter</button>
 
 \t</form>
 </div>
@@ -159,7 +159,7 @@ class __TwigTemplate_8b036070f5f37c405adf23d2837e31ea extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Se connecter
+{% block title %}Connexion
 {% endblock %}
 
 {% block body %}
@@ -176,7 +176,7 @@ class __TwigTemplate_8b036070f5f37c405adf23d2837e31ea extends Template
 \t\t<input type=\"password\" id=\"password\" name=\"_password\">
 \t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"{{csrf_token('authenticate')}}\">
 
-\t\t<button type=\"submit\" class=\"link-secondary btn btn-primary\">Login</button>
+\t\t<button type=\"submit\" class=\"link-secondary btn btn-primary\">Se connecter</button>
 
 \t</form>
 </div>
