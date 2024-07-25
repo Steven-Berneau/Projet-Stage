@@ -66,7 +66,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Jess'Poke - Accueil
+        yield "JessPoke - Accueil
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -155,7 +155,6 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         yield "</nav>
 \t\t
 
-
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -194,7 +193,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Jess'Poke - Accueil
+{% block title %}JessPoke - Accueil
 {% endblock %}
 
 {% block body %}
@@ -248,7 +247,6 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
 \t\t{% endif %}
 </nav>
 \t\t
-
 
 {% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
     }

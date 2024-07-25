@@ -12,7 +12,9 @@ class EvenementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('Name')
+            ->add('Name', NULL, ['label_attr' => ['class' => 'link-light text-decoration-underline fw-bold']])
+            ->add('Description', NULL, ['label_attr' => ['class' => 'link-light text-decoration-underline fw-bold']])
+            ->add('Lieux', NULL, ['label_attr' => ['class' => 'link-light text-decoration-underline fw-bold']])
         ;
     }
 

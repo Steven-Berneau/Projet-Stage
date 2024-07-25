@@ -1,16 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Evenement index{% endblock %}
+{% block title %}Gestion des évènements{% endblock %}
 
 {% block body %}
-    <h1>Evenement index</h1>
+    <h1 class="col d-flex align-items-center justify-content-center link-light text-decoration-underline">Menu de gestion des évènements</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
+                <th class="link-light text-decoration-underline">Id</th>
+                <th class="link-light text-decoration-underline">Nom</th>
+                <th class="link-light text-decoration-underline">Description</th>
+                <th class="link-light text-decoration-underline">Lieux</th>
             </tr>
         </thead>
         <tbody>
@@ -18,18 +19,21 @@
             <tr>
                 <td>{{ evenement.id }}</td>
                 <td>{{ evenement.Name }}</td>
+                <td>{{ evenement.Description }}</td>
+                <td>{{ evenement.Lieux }}</td>
                 <td>
-                    <a href="{{ path('app_evenement_show', {'id': evenement.id}) }}">show</a>
-                    <a href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">edit</a>
+                    <a class="link-primary fw-bold btn btn-light bg-light" href="{{ path('app_evenement_show', {'id': evenement.id}) }}">Voir les évènements</a>
+                    <a class="link-primary fw-bold btn btn-light bg-light" href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">Editer les évènements</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="4" class="link-light fst-italic-bold">Aucun évènement trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_evenement_new') }}">Create new</a>
+    
+    <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_evenement_new') }}">Créer un évènement</a>
+    
 {% endblock %}
