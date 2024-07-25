@@ -95,29 +95,65 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
             // line 10
             yield "
-\t\t<p>Email: ";
-            // line 11
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11), "email", [], "any", false, false, false, 11), "html", null, true);
-            yield "</p>
-\t\t<div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"";
-            // line 13
+\t\t<nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
+  <div class=\"container-fluid\">
+  <img id=\"logo\">
+    <a class=\"navbar-brand\" href=\"";
+            // line 14
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+            yield "\">Accueil</a>
+    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+      <span class=\"navbar-toggler-icon\"></span>
+    </button>
+    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
+        <li class=\"nav-item\">
+          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Salon</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Portfolio</a>
+        </li>
+        <li class=\"nav-item dropdown\">
+          <a class=\"nav-link active dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
+            Evènements
+          </a>
+          <ul class=\"dropdown-menu\">
+            <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>
+            <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>
+            <li><hr class=\"dropdown-divider\"></li>
+            <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>
+          </ul>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link disabled\" aria-disabled=\"true\">Disabled</a>
+        </li>
+      </ul>
+      <form class=\"d-flex\" role=\"search\">
+        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Rechercher\" aria-label=\"Search\">
+        <button class=\"btn btn-outline-light\" type=\"submit\">Rechercher</button>
+      </form>
+    </div>
+  </div>
+  <div class=\"col d-flex align-items-center justify-content-center\">
+\t\t<a class=\"link-light btn btn-primary \" href=\"";
+            // line 48
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">Se déconnecter</a>
 \t\t</div>
 \t\t";
         } else {
-            // line 16
+            // line 51
             yield "\t\t<div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"";
-            // line 17
+\t\t<a class=\"link-secondary btn btn-primary\" href=\"";
+            // line 52
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">Se connecter</a>
 \t\t</div>
 \t\t";
         }
-        // line 19
-        yield " 
+        // line 55
+        yield "</nav>
+\t\t
 
 
 ";
@@ -151,7 +187,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  120 => 19,  114 => 17,  111 => 16,  105 => 13,  100 => 11,  97 => 10,  95 => 9,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  155 => 55,  149 => 52,  146 => 51,  140 => 48,  103 => 14,  97 => 10,  95 => 9,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -166,15 +202,52 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
 
 \t{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-\t\t<p>Email: {{app.user.email}}</p>
-\t\t<div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"{{path('app_logout')}}\">Se déconnecter</a>
+\t\t<nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
+  <div class=\"container-fluid\">
+  <img id=\"logo\">
+    <a class=\"navbar-brand\" href=\"{{path('app_home')}}\">Accueil</a>
+    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+      <span class=\"navbar-toggler-icon\"></span>
+    </button>
+    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
+        <li class=\"nav-item\">
+          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Salon</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Portfolio</a>
+        </li>
+        <li class=\"nav-item dropdown\">
+          <a class=\"nav-link active dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
+            Evènements
+          </a>
+          <ul class=\"dropdown-menu\">
+            <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>
+            <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>
+            <li><hr class=\"dropdown-divider\"></li>
+            <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>
+          </ul>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link disabled\" aria-disabled=\"true\">Disabled</a>
+        </li>
+      </ul>
+      <form class=\"d-flex\" role=\"search\">
+        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Rechercher\" aria-label=\"Search\">
+        <button class=\"btn btn-outline-light\" type=\"submit\">Rechercher</button>
+      </form>
+    </div>
+  </div>
+  <div class=\"col d-flex align-items-center justify-content-center\">
+\t\t<a class=\"link-light btn btn-primary \" href=\"{{path('app_logout')}}\">Se déconnecter</a>
 \t\t</div>
 \t\t{% else %}
 \t\t<div class=\"col d-flex align-items-center justify-content-center\">
-\t\t<a class=\"link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1\" href=\"{{path('app_login')}}\">Se connecter</a>
+\t\t<a class=\"link-secondary btn btn-primary\" href=\"{{path('app_login')}}\">Se connecter</a>
 \t\t</div>
-\t\t{% endif %} 
+\t\t{% endif %}
+</nav>
+\t\t
 
 
 {% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");

@@ -8,15 +8,57 @@
 
 	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-		<p>Email: {{app.user.email}}</p>
-		<div class="col d-flex align-items-center justify-content-center">
-		<a class="link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1" href="{{path('app_logout')}}">Se déconnecter</a>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+  <img id="logo">
+    <a class="navbar-brand" href="{{path('app_home')}}">Accueil</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Salon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-current="page">
+            Evènements
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Rechercher</button>
+      </form>
+    </div>
+  </div>
+  <div class="col d-flex align-items-center justify-content-center">
+		<a class="link-light btn btn-primary " href="{{path('app_logout')}}">Se déconnecter</a>
 		</div>
 		{% else %}
 		<div class="col d-flex align-items-center justify-content-center">
-		<a class="link-secondary btn btn-primary btn-lg w-75 m-1 pl-5 pr-5 fs-1" href="{{path('app_login')}}">Se connecter</a>
+		<a class="link-secondary btn btn-primary" href="{{path('app_login')}}">Se connecter</a>
 		</div>
-		{% endif %} 
+		{% endif %}
+</nav>
+		
 
+<ul>
+  <li><a href="{{path('app_evenement_index')}}"> Gérer les évènements</a></li>
+  {# <li><a href="{{path('app_evenement_index')}}"> Gérer le portfolio</a></li> #}
+  <li><a href="{{path('app_home')}}"> Gérer la page d'accueil</a></li>
+</ul>
 
 {% endblock %}

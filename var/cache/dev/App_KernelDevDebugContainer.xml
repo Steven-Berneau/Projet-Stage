@@ -131,6 +131,7 @@
     <parameter key="profiler.storage.dsn">file:/var/www/Projet-Stage/var/cache/dev/profiler</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>bootstrap_5_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">/var/www/Projet-Stage/templates</parameter>
     <parameter key="doctrine.dbal.configuration.class">Doctrine\DBAL\Configuration</parameter>
