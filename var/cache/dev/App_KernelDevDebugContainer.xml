@@ -326,11 +326,39 @@
         <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RegistrationController"/>
       </call>
     </service>
+    <service id="App\Controller\RenderContactController" class="App\Controller\RenderContactController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RenderContactController"/>
+      </call>
+    </service>
     <service id="App\Controller\RenderEventController" class="App\Controller\RenderEventController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RenderEventController"/>
+      </call>
+    </service>
+    <service id="App\Controller\RenderPortfolioController" class="App\Controller\RenderPortfolioController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RenderPortfolioController"/>
+      </call>
+    </service>
+    <service id="App\Controller\RenderSalonController" class="App\Controller\RenderSalonController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RenderSalonController"/>
+      </call>
+    </service>
+    <service id="App\Controller\RenderSoinController" class="App\Controller\RenderSoinController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.8FV7jiY.App\Controller\RenderSoinController"/>
       </call>
     </service>
     <service id="App\Form\EvenementType" class="App\Form\EvenementType" autowire="true" autoconfigure="true">
@@ -4852,9 +4880,21 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RenderContactController" class="App\Controller\RenderContactController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RenderContactController" class="App\Controller\RenderContactController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RenderContactController" class="App\Controller\RenderContactController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RenderEventController" class="App\Controller\RenderEventController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RenderEventController" class="App\Controller\RenderEventController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RenderEventController" class="App\Controller\RenderEventController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RenderPortfolioController" class="App\Controller\RenderPortfolioController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RenderPortfolioController" class="App\Controller\RenderPortfolioController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RenderPortfolioController" class="App\Controller\RenderPortfolioController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RenderSalonController" class="App\Controller\RenderSalonController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RenderSalonController" class="App\Controller\RenderSalonController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RenderSalonController" class="App\Controller\RenderSalonController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RenderSoinController" class="App\Controller\RenderSoinController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RenderSoinController" class="App\Controller\RenderSoinController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RenderSoinController" class="App\Controller\RenderSoinController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EvenementType" class="App\Form\EvenementType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\EvenementType" class="App\Form\EvenementType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
@@ -5721,9 +5761,33 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.8FV7jiY" method="withContext"/>
     </service>
+    <service id=".service_locator.8FV7jiY.App\Controller\RenderContactController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RenderContactController"/>
+      <argument>App\Controller\RenderContactController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.8FV7jiY" method="withContext"/>
+    </service>
     <service id=".service_locator.8FV7jiY.App\Controller\RenderEventController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\RenderEventController"/>
       <argument>App\Controller\RenderEventController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.8FV7jiY" method="withContext"/>
+    </service>
+    <service id=".service_locator.8FV7jiY.App\Controller\RenderPortfolioController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RenderPortfolioController"/>
+      <argument>App\Controller\RenderPortfolioController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.8FV7jiY" method="withContext"/>
+    </service>
+    <service id=".service_locator.8FV7jiY.App\Controller\RenderSalonController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RenderSalonController"/>
+      <argument>App\Controller\RenderSalonController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.8FV7jiY" method="withContext"/>
+    </service>
+    <service id=".service_locator.8FV7jiY.App\Controller\RenderSoinController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RenderSoinController"/>
+      <argument>App\Controller\RenderSoinController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.8FV7jiY" method="withContext"/>
     </service>
@@ -5869,7 +5933,11 @@
           <argument>App\Controller\HomeController</argument>
           <argument>App\Controller\LoginController</argument>
           <argument>App\Controller\RegistrationController</argument>
+          <argument>App\Controller\RenderContactController</argument>
           <argument>App\Controller\RenderEventController</argument>
+          <argument>App\Controller\RenderPortfolioController</argument>
+          <argument>App\Controller\RenderSalonController</argument>
+          <argument>App\Controller\RenderSoinController</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
       </call>

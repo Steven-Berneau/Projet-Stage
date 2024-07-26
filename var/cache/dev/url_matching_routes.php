@@ -21,7 +21,11 @@ return [
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\LoginController::logOut'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
+        '/render/contact' => [[['_route' => 'app_render_contact', '_controller' => 'App\\Controller\\RenderContactController::index'], null, null, null, false, false, null]],
         '/render/event' => [[['_route' => 'app_render_event', '_controller' => 'App\\Controller\\RenderEventController::index'], null, null, null, false, false, null]],
+        '/render/portfolio' => [[['_route' => 'app_render_portfolio', '_controller' => 'App\\Controller\\RenderPortfolioController::index'], null, null, null, false, false, null]],
+        '/render/salon' => [[['_route' => 'app_render_salon', '_controller' => 'App\\Controller\\RenderSalonController::index'], null, null, null, false, false, null]],
+        '/render/soin' => [[['_route' => 'app_render_soin', '_controller' => 'App\\Controller\\RenderSoinController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

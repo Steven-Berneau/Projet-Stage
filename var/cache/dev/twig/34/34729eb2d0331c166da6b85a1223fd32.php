@@ -105,13 +105,22 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
     <div class=\"collapse navbar-collapse link-primary \" id=\"navbarSupportedContent\">
       <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Salon</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
+            // line 19
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_render_salon");
+            yield "\">Salon</a>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Portfolio</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
+            // line 22
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_render_portfolio");
+            yield "\">Portfolio</a>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Soin & hygiène</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
+            // line 25
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_render_soin");
+            yield "\">Soin & Hygiène</a>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
@@ -121,7 +130,10 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         </li>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Contact</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
+            // line 32
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_render_contact");
+            yield "\">Contact</a>
         </li>
         ";
             // line 37
@@ -197,7 +209,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  165 => 57,  159 => 54,  156 => 53,  153 => 52,  147 => 49,  144 => 48,  138 => 45,  128 => 37,  119 => 28,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  177 => 57,  171 => 54,  168 => 53,  165 => 52,  159 => 49,  156 => 48,  150 => 45,  140 => 37,  135 => 32,  128 => 28,  122 => 25,  116 => 22,  110 => 19,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -220,20 +232,20 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
     <div class=\"collapse navbar-collapse link-primary \" id=\"navbarSupportedContent\">
       <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Salon</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_salon')}}\">Salon</a>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Portfolio</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_portfolio')}}\">Portfolio</a>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Soin & hygiène</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_soin')}}\">Soin & Hygiène</a>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_event')}}\">Evènements</a>
         </li>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Contact</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_contact')}}\">Contact</a>
         </li>
         {# <li class=\"nav-item\">
           <a class=\"nav-link disabled\" aria-disabled=\"true\">Disabled</a>
