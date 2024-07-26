@@ -120,7 +120,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
             // line 25
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_render_soin");
-            yield "\">Soin & Hygiène</a>
+            yield "\">Soins & Hygiène</a>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
@@ -238,7 +238,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_portfolio')}}\">Portfolio</a>
         </li>
         <li class=\"nav-item\">
-          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_soin')}}\">Soin & Hygiène</a>
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_soin')}}\">Soins & Hygiène</a>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_event')}}\">Evènements</a>

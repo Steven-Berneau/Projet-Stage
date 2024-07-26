@@ -66,7 +66,7 @@ class __TwigTemplate_fccb5dc02cc32c5815c5f58bb9c51c30 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Register";
+        yield "Inscription";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -87,7 +87,7 @@ class __TwigTemplate_fccb5dc02cc32c5815c5f58bb9c51c30 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Register</h1>
+        yield "    <h1 class=\"d-flex flex-column justify-content-center align-items-center link-light\">Inscription</h1>
 
     ";
         // line 8
@@ -98,24 +98,55 @@ class __TwigTemplate_fccb5dc02cc32c5815c5f58bb9c51c30 extends Template
         // line 10
         yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 10, $this->source); })()), 'form_start');
         yield "
-        ";
-        // line 11
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 11, $this->source); })()), "email", [], "any", false, false, false, 11), 'row');
+  <div class=\"row pt-5\">
+\t\t<div class=\"col-lg-8 offset-lg-2 col-12 pt-5\">
+\t\t    <form>
+\t\t      <div class=\"form-group\">
+\t\t          <div class=\"row\">
+\t\t            <div class=\"col-md-6\">
+\t\t              ";
+        // line 17
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 17, $this->source); })()), "Nom", [], "any", false, false, false, 17), 'row');
         yield "
-        ";
-        // line 12
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 12, $this->source); })()), "plainPassword", [], "any", false, false, false, 12), 'row', ["label" => "Password"]);
-        // line 14
+\t\t            </div>
+\t\t            <div class=\"col-md-6\">
+\t\t              ";
+        // line 20
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 20, $this->source); })()), "Prenom", [], "any", false, false, false, 20), 'row');
         yield "
-        ";
-        // line 15
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 15, $this->source); })()), "agreeTerms", [], "any", false, false, false, 15), 'row');
+\t\t            </div>
+\t\t          </div>
+\t\t      </div>
+   <div class=\"form-group\">
+\t\t          <div class=\"row\">
+\t\t            <div class=\"col-md-6\">
+\t\t              ";
+        // line 27
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 27, $this->source); })()), "Email", [], "any", false, false, false, 27), 'row');
         yield "
+\t\t            </div>
+\t\t            <div class=\"col-md-6\">
+\t\t              ";
+        // line 30
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 30, $this->source); })()), "plainPassword", [], "any", false, false, false, 30), 'row', ["label" => "Mot de passe"]);
+        // line 32
+        yield "
+\t\t            </div>
+\t\t          </div>
+\t\t      </div>
+              <div class=\"form-check\">
+  ";
+        // line 37
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 37, $this->source); })()), "AccepterLesConditions", [], "any", false, false, false, 37), 'row');
+        yield "
+</div>
+        
+       
 
-        <button type=\"submit\" class=\"btn\">Register</button>
+        <button type=\"submit\" class=\"link-primary btn btn-light\">S'inscrire</button>
     ";
-        // line 18
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 18, $this->source); })()), 'form_end');
+        // line 43
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 43, $this->source); })()), 'form_end');
         yield "
 ";
         
@@ -148,28 +179,53 @@ class __TwigTemplate_fccb5dc02cc32c5815c5f58bb9c51c30 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  118 => 18,  112 => 15,  109 => 14,  107 => 12,  103 => 11,  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  149 => 43,  140 => 37,  133 => 32,  131 => 30,  125 => 27,  115 => 20,  109 => 17,  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+    <h1 class=\"d-flex flex-column justify-content-center align-items-center link-light\">Inscription</h1>
 
     {{ form_errors(registrationForm) }}
 
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
+  <div class=\"row pt-5\">
+\t\t<div class=\"col-lg-8 offset-lg-2 col-12 pt-5\">
+\t\t    <form>
+\t\t      <div class=\"form-group\">
+\t\t          <div class=\"row\">
+\t\t            <div class=\"col-md-6\">
+\t\t              {{ form_row(registrationForm.Nom) }}
+\t\t            </div>
+\t\t            <div class=\"col-md-6\">
+\t\t              {{ form_row(registrationForm.Prenom) }}
+\t\t            </div>
+\t\t          </div>
+\t\t      </div>
+   <div class=\"form-group\">
+\t\t          <div class=\"row\">
+\t\t            <div class=\"col-md-6\">
+\t\t              {{ form_row(registrationForm.Email) }}
+\t\t            </div>
+\t\t            <div class=\"col-md-6\">
+\t\t              {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+\t\t            </div>
+\t\t          </div>
+\t\t      </div>
+              <div class=\"form-check\">
+  {{ form_row(registrationForm.AccepterLesConditions) }}
+</div>
+        
+       
 
-        <button type=\"submit\" class=\"btn\">Register</button>
+        <button type=\"submit\" class=\"link-primary btn btn-light\">S'inscrire</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
 ", "registration/register.html.twig", "/home/steven/Projet-Stage/templates/registration/register.html.twig");

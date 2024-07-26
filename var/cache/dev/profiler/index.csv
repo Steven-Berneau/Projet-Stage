@@ -1150,3 +1150,4 @@ abc28f,172.23.0.1,GET,https://localhost:8002/app_render_soin?url=app_render_soin
 6768fa,172.23.0.1,GET,https://localhost:8002/,1721992323,,200,request
 ac01b8,172.23.0.1,GET,https://localhost:8002/render/contact?url=render%2Fcontact,1721992323,,200,request
 183303,172.23.0.1,GET,https://localhost:8002/render/event?url=render%2Fevent,1721992326,,200,request
+cbf8a5,172.23.0.1,GET,https://localhost:8002/,1721992476,,200,request

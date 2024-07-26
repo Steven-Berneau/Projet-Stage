@@ -56,7 +56,7 @@ class __TwigTemplate_7e2719c7125cb884721fe9b9f3243ade extends Template
 
     }
 
-    // line 3
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -66,7 +66,8 @@ class __TwigTemplate_7e2719c7125cb884721fe9b9f3243ade extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello AdminController!";
+        yield "Menu administrateur
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -76,7 +77,7 @@ class __TwigTemplate_7e2719c7125cb884721fe9b9f3243ade extends Template
         return; yield '';
     }
 
-    // line 5
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -86,24 +87,41 @@ class __TwigTemplate_7e2719c7125cb884721fe9b9f3243ade extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        yield "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        yield "! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/steven/Projet-Stage/src/Controller/AdminController.php</code></li>
-        <li>Your template at <code>/home/steven/Projet-Stage/templates/admin/index.html.twig</code></li>
-    </ul>
-</div>
+        // line 5
+        yield "    <nav class=\"navbar navbar-expand-lg bg-light\">
+        <div class=\"container-fluid\">
+        <img id=\"Admin\">
+            <a class=\"navbar-brand link-primary fw-bold\" href=\"";
+        // line 8
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        yield "\">Accueil</a>
+            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav\">
+                    <li class=\"nav-item\">
+                        <a  class=\"nav-link link-primary fst-italic\" href=\"";
+        // line 15
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_evenement_index");
+        yield "\">
+                            Gérer les évènements</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link link-primary fst-italic\" href=\"";
+        // line 19
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        yield "\">
+                            Gérer la page d'accueil</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link nav-link link-primary fst-italic\" href=\"#\">
+                            Gérer le portfolio</a>
+                    </li>                   
+                </ul>
+            </div>
+        </div>
+    </nav>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -135,30 +153,40 @@ class __TwigTemplate_7e2719c7125cb884721fe9b9f3243ade extends Template
      */
     public function getDebugInfo()
     {
-        return array (  98 => 12,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  113 => 19,  106 => 15,  96 => 8,  91 => 5,  81 => 4,  60 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
-
-{% block title %}Hello AdminController!{% endblock %}
-
+{% block title %}Menu administrateur
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/steven/Projet-Stage/src/Controller/AdminController.php</code></li>
-        <li>Your template at <code>/home/steven/Projet-Stage/templates/admin/index.html.twig</code></li>
-    </ul>
-</div>
+    <nav class=\"navbar navbar-expand-lg bg-light\">
+        <div class=\"container-fluid\">
+        <img id=\"Admin\">
+            <a class=\"navbar-brand link-primary fw-bold\" href=\"{{path('app_home')}}\">Accueil</a>
+            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav\">
+                    <li class=\"nav-item\">
+                        <a  class=\"nav-link link-primary fst-italic\" href=\"{{path('app_evenement_index')}}\">
+                            Gérer les évènements</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link link-primary fst-italic\" href=\"{{path('app_home')}}\">
+                            Gérer la page d'accueil</a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link nav-link link-primary fst-italic\" href=\"#\">
+                            Gérer le portfolio</a>
+                    </li>                   
+                </ul>
+            </div>
+        </div>
+    </nav>
 {% endblock %}
 ", "admin/index.html.twig", "/home/steven/Projet-Stage/templates/admin/index.html.twig");
     }
