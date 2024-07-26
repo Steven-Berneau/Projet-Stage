@@ -66,7 +66,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "JessPoke - Accueil
+        yield "ShopTattoo - Accueil
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -110,6 +110,9 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Portfolio</a>
         </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Soin & hygiène</a>
+        </li>
         <li class=\"nav-item dropdown\">
           <a class=\"nav-link active dropdown-toggle link-primary fst-italic\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
             Evènements
@@ -125,7 +128,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Contact</a>
         </li>
         ";
-            // line 41
+            // line 44
             yield "      </ul>
       <form class=\"d-flex\" role=\"search\">
         <input class=\"form-control me-2\" type=\"search\" placeholder=\"Rechercher\" aria-label=\"Search\">
@@ -135,36 +138,36 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
   </div>
   <div class=\"col d-flex align-items-center justify-content-center\">
 \t\t<a class=\"link-primary btn btn-primary bg-light\" href=\"";
-            // line 49
+            // line 52
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">Déconnexion</a>
 \t\t</div>
 \t\t";
         } else {
-            // line 52
+            // line 55
             yield "\t\t<div class=\"col d-flex align-items-center justify-content-center\">
 \t\t<a class=\"link-secondary btn btn-primary bg-light\" href=\"";
-            // line 53
+            // line 56
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">Connexion</a>
 \t\t</div>
 \t\t";
         }
-        // line 56
+        // line 59
         yield "    ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 57
+            // line 60
             yield "    <div class=\"d-grid gap-2 d-md-flex justify-content\">
         <a class=\"link-primary fw-bold btn bg-light\" href=\"";
-            // line 58
+            // line 61
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin");
             yield "\"><img id=\"Admin\"></a>
     </div>
 ";
         }
-        // line 61
-        yield "       
-</nav>
+        // line 64
+        yield "</nav>
+
 
 
 ";
@@ -198,14 +201,14 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  166 => 61,  160 => 58,  157 => 57,  154 => 56,  148 => 53,  145 => 52,  139 => 49,  129 => 41,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  169 => 64,  163 => 61,  160 => 60,  157 => 59,  151 => 56,  148 => 55,  142 => 52,  132 => 44,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}JessPoke - Accueil
+{% block title %}ShopTattoo - Accueil
 {% endblock %}
 
 {% block body %}
@@ -225,6 +228,9 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Portfolio</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Soin & hygiène</a>
         </li>
         <li class=\"nav-item dropdown\">
           <a class=\"nav-link active dropdown-toggle link-primary fst-italic\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
@@ -263,8 +269,8 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         <a class=\"link-primary fw-bold btn bg-light\" href=\"{{ path('app_admin') }}\"><img id=\"Admin\"></a>
     </div>
 {% endif %}
-       
 </nav>
+
 
 
 {% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
