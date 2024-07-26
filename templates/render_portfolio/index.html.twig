@@ -1,20 +1,57 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RenderPortfolioController!{% endblock %}
+{% block title %}Portfolio{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/steven/Projet-Stage/src/Controller/RenderPortfolioController.php</code></li>
-        <li>Your template at <code>/home/steven/Projet-Stage/templates/render_portfolio/index.html.twig</code></li>
-    </ul>
-</div>
+		<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+  <img id="logo">
+    <a class="navbar-brand link-primary fw-bold" href="{{path('app_home')}}">Accueil</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse link-primary " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="{{path('app_render_salon')}}">Salon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="{{path('app_render_portfolio')}}">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="{{path('app_render_soin')}}">Soins & Hygiène</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="{{path('app_render_event')}}">Evènements</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active link-primary fst-italic" aria-current="page" href="{{path('app_render_contact')}}">Contact</a>
+        </li>
+        {# <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> #}
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+        <button class="link-primary btn btn-outline-primary" type="submit">Rechercher</button>
+      </form>
+    </div>
+  </div>
+  <div class="col d-flex align-items-center justify-content-center">
+		<a class="link-primary btn btn-primary bg-light" href="{{path('app_logout')}}">Déconnexion</a>
+		</div>
+		{% else %}
+		<div class="col d-flex align-items-center justify-content-center">
+		<a class="link-secondary btn btn-primary bg-light" href="{{path('app_login')}}">Connexion</a>
+		</div>
+		{% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+    <div class="d-grid gap-2 d-md-flex justify-content">
+        <a class="link-primary fw-bold btn bg-light" href="{{ path('app_admin') }}"><img id="Admin"></a>
+    </div>
+{% endif %}
+</nav>
 {% endblock %}

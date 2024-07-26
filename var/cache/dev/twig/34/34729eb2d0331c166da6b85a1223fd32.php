@@ -176,7 +176,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         // line 57
         yield "</nav>
 
-
+<h1 id=\"TitreAccueil\" class=\"col d-flex align-items-center justify-content-center\">ShopTattoo</h1>
 
 ";
         
@@ -272,7 +272,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
 {% endif %}
 </nav>
 
-
+<h1 id=\"TitreAccueil\" class=\"col d-flex align-items-center justify-content-center\">ShopTattoo</h1>
 
 {% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
     }

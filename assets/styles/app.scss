@@ -38,3 +38,12 @@ body {
     content:url(/assets/photoSalon/matérielTatouage.jpg);
     
 }
+
+#TitreAccueil
+{  
+    font-size: 250px;
+    background: -webkit-linear-gradient( #BF8F9C, #842DCE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Brush Script MT', cursive, sans-serif;   
+}
