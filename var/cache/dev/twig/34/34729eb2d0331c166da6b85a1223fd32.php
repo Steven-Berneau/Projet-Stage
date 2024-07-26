@@ -178,6 +178,28 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
 
 <h1 id=\"TitreAccueil\" class=\"col d-flex align-items-center justify-content-center\">ShopTattoo</h1>
 
+<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+  <div class=\"row g-0\">
+    <div class=\"col-md-4\">
+      <img id=\"Salon\" class=\"img-fluid rounded-start\" alt=\"...\">
+    </div>
+    <div class=\"col-md-8\">
+      <div class=\"card-body\">
+        <h5 class=\"card-title link-light fst-italic\">Accueil du Shop</h5>
+
+Bienvenue chez Shop'Tattoo, Flora tatoueuse du département du Cher (18). Spécialisé en tatouage Dotwork, réaliste et aquarelle, Flora vous offre des designs uniques et professionnels pour satisfaire toutes vos envies artistiques.
+
+Après des études en arts graphiques suivies d’une formation en PAO de niveau 3, Flora a transformée sa passion en métier en ouvrant son propre salon de tatouage à Bourges. La maîtrise d’une technique complexe, couplée à une spécialisation en styles ornementaux, nous place au sommet de l’art du tatouage.</p>
+<a class=\"card-text\"><small class=\"text-body-secondary\" href=";
+        // line 73
+        yield "https://www.instagram.com/seaderrant/?hl=fr";
+        yield ">Lien: Instagram</small></a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -209,7 +231,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  177 => 57,  171 => 54,  168 => 53,  165 => 52,  159 => 49,  156 => 48,  150 => 45,  140 => 37,  135 => 32,  128 => 28,  122 => 25,  116 => 22,  110 => 19,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  195 => 73,  177 => 57,  171 => 54,  168 => 53,  165 => 52,  159 => 49,  156 => 48,  150 => 45,  140 => 37,  135 => 32,  128 => 28,  122 => 25,  116 => 22,  110 => 19,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -273,6 +295,25 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
 </nav>
 
 <h1 id=\"TitreAccueil\" class=\"col d-flex align-items-center justify-content-center\">ShopTattoo</h1>
+
+<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+  <div class=\"row g-0\">
+    <div class=\"col-md-4\">
+      <img id=\"Salon\" class=\"img-fluid rounded-start\" alt=\"...\">
+    </div>
+    <div class=\"col-md-8\">
+      <div class=\"card-body\">
+        <h5 class=\"card-title link-light fst-italic\">Accueil du Shop</h5>
+
+Bienvenue chez Shop'Tattoo, Flora tatoueuse du département du Cher (18). Spécialisé en tatouage Dotwork, réaliste et aquarelle, Flora vous offre des designs uniques et professionnels pour satisfaire toutes vos envies artistiques.
+
+Après des études en arts graphiques suivies d’une formation en PAO de niveau 3, Flora a transformée sa passion en métier en ouvrant son propre salon de tatouage à Bourges. La maîtrise d’une technique complexe, couplée à une spécialisation en styles ornementaux, nous place au sommet de l’art du tatouage.</p>
+<a class=\"card-text\"><small class=\"text-body-secondary\" href={{\"https://www.instagram.com/seaderrant/?hl=fr\"}}>Lien: Instagram</small></a>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
     }
