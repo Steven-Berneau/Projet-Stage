@@ -27,6 +27,7 @@ return [
     'app_login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\LoginController::logOut'], [], [['text', '/logout']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
+    'app_render_event' => [[], ['_controller' => 'App\\Controller\\RenderEventController::index'], [], [['text', '/render/event']], [], [], []],
     'App\Controller\AdminController::index' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], [], []],
     'App\Controller\EvenementController::index' => [[], ['_controller' => 'App\\Controller\\EvenementController::index'], [], [['text', '/gestionAdmin/']], [], [], []],
     'App\Controller\EvenementController::new' => [[], ['_controller' => 'App\\Controller\\EvenementController::new'], [], [['text', '/gestionAdmin/new']], [], [], []],
@@ -37,4 +38,5 @@ return [
     'App\Controller\LoginController::index' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'App\Controller\LoginController::logOut' => [[], ['_controller' => 'App\\Controller\\LoginController::logOut'], [], [['text', '/logout']], [], [], []],
     'App\Controller\RegistrationController::register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
+    'App\Controller\RenderEventController::index' => [[], ['_controller' => 'App\\Controller\\RenderEventController::index'], [], [['text', '/render/event']], [], [], []],
 ];

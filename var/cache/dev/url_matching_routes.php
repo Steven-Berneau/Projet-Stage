@@ -21,6 +21,7 @@ return [
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\LoginController::logOut'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
+        '/render/event' => [[['_route' => 'app_render_event', '_controller' => 'App\\Controller\\RenderEventController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

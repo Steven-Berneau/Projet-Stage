@@ -113,22 +113,18 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Soin & hygiène</a>
         </li>
-        <li class=\"nav-item dropdown\">
-          <a class=\"nav-link active dropdown-toggle link-primary fst-italic\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
-            Evènements
-          </a>
-          <ul class=\"dropdown-menu\">
-            <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>
-            <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>
-            <li><hr class=\"dropdown-divider\"></li>
-            <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>
-          </ul>
+        <li class=\"nav-item\">
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"";
+            // line 28
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_render_event");
+            yield "\">Evènements</a>
+        </li>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Contact</a>
         </li>
         ";
-            // line 44
+            // line 37
             yield "      </ul>
       <form class=\"d-flex\" role=\"search\">
         <input class=\"form-control me-2\" type=\"search\" placeholder=\"Rechercher\" aria-label=\"Search\">
@@ -138,34 +134,34 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
   </div>
   <div class=\"col d-flex align-items-center justify-content-center\">
 \t\t<a class=\"link-primary btn btn-primary bg-light\" href=\"";
-            // line 52
+            // line 45
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">Déconnexion</a>
 \t\t</div>
 \t\t";
         } else {
-            // line 55
+            // line 48
             yield "\t\t<div class=\"col d-flex align-items-center justify-content-center\">
 \t\t<a class=\"link-secondary btn btn-primary bg-light\" href=\"";
-            // line 56
+            // line 49
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">Connexion</a>
 \t\t</div>
 \t\t";
         }
-        // line 59
+        // line 52
         yield "    ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 60
+            // line 53
             yield "    <div class=\"d-grid gap-2 d-md-flex justify-content\">
         <a class=\"link-primary fw-bold btn bg-light\" href=\"";
-            // line 61
+            // line 54
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin");
             yield "\"><img id=\"Admin\"></a>
     </div>
 ";
         }
-        // line 64
+        // line 57
         yield "</nav>
 
 
@@ -201,7 +197,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  169 => 64,  163 => 61,  160 => 60,  157 => 59,  151 => 56,  148 => 55,  142 => 52,  132 => 44,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  165 => 57,  159 => 54,  156 => 53,  153 => 52,  147 => 49,  144 => 48,  138 => 45,  128 => 37,  119 => 28,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -232,16 +228,9 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Soin & hygiène</a>
         </li>
-        <li class=\"nav-item dropdown\">
-          <a class=\"nav-link active dropdown-toggle link-primary fst-italic\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-current=\"page\">
-            Evènements
-          </a>
-          <ul class=\"dropdown-menu\">
-            <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>
-            <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>
-            <li><hr class=\"dropdown-divider\"></li>
-            <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>
-          </ul>
+        <li class=\"nav-item\">
+          <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"{{path('app_render_event')}}\">Evènements</a>
+        </li>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link active link-primary fst-italic\" aria-current=\"page\" href=\"#\">Contact</a>
