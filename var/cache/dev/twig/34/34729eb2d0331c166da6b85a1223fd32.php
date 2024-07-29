@@ -211,10 +211,7 @@ Avec le temps, soutenu par ma femme, mon désir de m’épanouir artistiquement 
 <p class=\"fst-italic\">Bienvenue chez Shop'Tattoo, Flora tatoueuse du département du Cher (18). Spécialisé en tatouage Dotwork, réaliste et aquarelle, Flora vous offre des designs uniques et professionnels pour satisfaire toutes vos envies artistiques.
 
 Après des études en arts graphiques suivies d’une formation en PAO de niveau 3, Flora a transformée sa passion en métier en ouvrant son propre salon de tatouage à Bourges. La maîtrise d’une technique complexe, couplée à une spécialisation en styles ornementaux, nous place au sommet de l’art du tatouage.</p>
-<a class=\"card-text\"><small class=\"link-light fst-italic fw-bold\" href=";
-        // line 94
-        yield "https://www.instagram.com/seaderrant/?hl=fr";
-        yield ">Instagram</small></a>
+<a class=\"btn link-primary fw-bold bg-light fst-italic\" href=\"https://www.instagram.com/elisa.esposto/?hl=fr\">Instagram</a>
         
       </div>
     </div>
@@ -297,7 +294,7 @@ Chez Shop'Tattoo, chaque tatouée bénéficie d’une expérience sur mesure. Si
      */
     public function getDebugInfo()
     {
-        return array (  216 => 94,  177 => 57,  171 => 54,  168 => 53,  165 => 52,  159 => 49,  156 => 48,  150 => 45,  140 => 37,  135 => 32,  128 => 28,  122 => 25,  116 => 22,  110 => 19,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  177 => 57,  171 => 54,  168 => 53,  165 => 52,  159 => 49,  156 => 48,  150 => 45,  140 => 37,  135 => 32,  128 => 28,  122 => 25,  116 => 22,  110 => 19,  100 => 12,  94 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -395,7 +392,7 @@ Avec le temps, soutenu par ma femme, mon désir de m’épanouir artistiquement 
 <p class=\"fst-italic\">Bienvenue chez Shop'Tattoo, Flora tatoueuse du département du Cher (18). Spécialisé en tatouage Dotwork, réaliste et aquarelle, Flora vous offre des designs uniques et professionnels pour satisfaire toutes vos envies artistiques.
 
 Après des études en arts graphiques suivies d’une formation en PAO de niveau 3, Flora a transformée sa passion en métier en ouvrant son propre salon de tatouage à Bourges. La maîtrise d’une technique complexe, couplée à une spécialisation en styles ornementaux, nous place au sommet de l’art du tatouage.</p>
-<a class=\"card-text\"><small class=\"link-light fst-italic fw-bold\" href={{\"https://www.instagram.com/seaderrant/?hl=fr\"}}>Instagram</small></a>
+<a class=\"btn link-primary fw-bold bg-light fst-italic\" href=\"https://www.instagram.com/elisa.esposto/?hl=fr\">Instagram</a>
         
       </div>
     </div>

@@ -22,6 +22,12 @@ class Evenement
     #[ORM\Column(length: 255)]
     private ?string $Lieux = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Liens = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +65,30 @@ class Evenement
     public function setLieux(string $Lieux): static
     {
         $this->Lieux = $Lieux;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getLiens(): ?string
+    {
+        return $this->Liens;
+    }
+
+    public function setLiens(?string $Liens): static
+    {
+        $this->Liens = $Liens;
 
         return $this;
     }

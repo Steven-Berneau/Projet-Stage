@@ -16,7 +16,7 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerTOxWWMu\App_KernelDevDebugContainer([
     'container.build_hash' => 'TOxWWMu',
-    'container.build_id' => '2005194f',
-    'container.build_time' => 1722245354,
+    'container.build_id' => 'fc12c455',
+    'container.build_time' => 1722258580,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerTOxWWMu');
