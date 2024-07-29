@@ -51,7 +51,20 @@ body {
     background: -webkit-linear-gradient( #BF8F9C, #842DCE);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Brush Script MT', cursive, sans-serif;   
+    //-webkit-text-stroke-color: #FFFFFF;               Couleur de la bordure du texte.
+    //-webkit-text-stroke-width: 0.2mm;                 Epaisseur de la bordure du texte.
+    font-family: 'Brush Script MT', cursive, sans-serif; 
+}
+
+#TitreEvenement
+{  
+    font-size: 100px;
+    background: -webkit-linear-gradient( #BF8F9C, #842DCE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    //-webkit-text-stroke-color: #FFFFFF;               Couleur de la bordure du texte.
+    //-webkit-text-stroke-width: 0.2mm;                 Epaisseur de la bordure du texte.
+    font-family: 'Brush Script MT', cursive, sans-serif; 
 }
 
 #Evenement1

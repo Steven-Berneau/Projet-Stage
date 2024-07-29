@@ -179,7 +179,7 @@ class __TwigTemplate_4923c0a3f5f10c11eef6555f91e7ef4c extends Template
 <h1 id=\"TitreAccueil\" class=\"col d-flex align-items-center justify-content-center\">ShopTattoo</h1>
 
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Flora\" class=\"img-fluid rounded-start\" alt=\"Flora\">
@@ -199,7 +199,7 @@ Avec le temps, soutenu par ma femme, mon désir de m’épanouir artistiquement 
 </div>
 
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Salon\" class=\"img-fluid rounded-start\" alt=\"...\">
@@ -218,7 +218,7 @@ Après des études en arts graphiques suivies d’une formation en PAO de niveau
   </div>
 </div>
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Salon2\" class=\"img-fluid rounded-start\" alt=\"...\">
@@ -236,7 +236,7 @@ Chez Shop'Tattoo, chaque tatouée bénéficie d’une expérience sur mesure. Si
   </div>
 </div>
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Salon1\" class=\"img-fluid rounded-start\" alt=\"...\">
@@ -360,7 +360,7 @@ Chez Shop'Tattoo, chaque tatouée bénéficie d’une expérience sur mesure. Si
 <h1 id=\"TitreAccueil\" class=\"col d-flex align-items-center justify-content-center\">ShopTattoo</h1>
 
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Flora\" class=\"img-fluid rounded-start\" alt=\"Flora\">
@@ -380,7 +380,7 @@ Avec le temps, soutenu par ma femme, mon désir de m’épanouir artistiquement 
 </div>
 
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Salon\" class=\"img-fluid rounded-start\" alt=\"...\">
@@ -399,7 +399,7 @@ Après des études en arts graphiques suivies d’une formation en PAO de niveau
   </div>
 </div>
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Salon2\" class=\"img-fluid rounded-start\" alt=\"...\">
@@ -417,7 +417,7 @@ Chez Shop'Tattoo, chaque tatouée bénéficie d’une expérience sur mesure. Si
   </div>
 </div>
 
-<div class=\"card mb-3\" style=\"max-width: 1000px;\">
+<div class=\"card mb-3 ms-3\" style=\"max-width: 1000px;\">
   <div class=\"row g-0\">
     <div class=\"col-md-4\">
       <img id=\"Salon1\" class=\"img-fluid rounded-start\" alt=\"...\">

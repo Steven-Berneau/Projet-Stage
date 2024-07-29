@@ -54,6 +54,9 @@
     </div>
 {% endif %}
 </nav>
+
+<h1 id="TitreEvenement" class="col d-flex align-items-center justify-content-center">Liste des évènements</h1>
+
 <div class="container">
 <div class="row row-cols-3">
  {% for evenement in evenements %}
@@ -61,9 +64,10 @@
     <div class="card " >
       <img class="card-img-top " alt="..." style="width: 100%;background-size:cover; object-fit: contains;" src="./../../public/build/images/{{ evenement.image}}">
       <div class="card-body">
-        <h5 class="card-title">{{evenement.name}}</h5>
-        <p class="card-text">{{ evenement.Description}}</p>
-          <a class="link-primary fw-bold btn bg-light" href={{ evenement.liens }}>Accéder au site</a>
+        <h5 class="card-title link-light fst-italic fw-bold">{{evenement.Name}}</h5>
+        <p class="card-text fst-italic ">{{ evenement.Description}}</p>
+        <p class="card-text  fst-italic fw-bold link-secondary"><small class="link-light"></small>{{ evenement.Lieux}}</p>
+          <a class="link-primary fw-bold btn bg-light" href={{ evenement.Liens }}>Accéder au site</a>
       </div>
     </div>
  </div>
