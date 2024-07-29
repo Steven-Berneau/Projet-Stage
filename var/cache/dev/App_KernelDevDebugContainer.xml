@@ -401,7 +401,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.xybBYQ9"/>
+      <argument type="service" id=".service_locator.GdQQJHX"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -1811,7 +1811,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.xybBYQ9"/>
+      <argument type="service" id=".service_locator.GdQQJHX"/>
     </service>
     <service id="routing.resolver" class="Symfony\Component\Config\Loader\LoaderResolver">
       <call method="addLoader">
@@ -5532,7 +5532,13 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.DQcw8Me" method="withContext"/>
     </service>
-    <service id=".service_locator.xybBYQ9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.l6hZplE.App\Controller\RenderEventController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RenderEventController::index()"/>
+      <argument>App\Controller\RenderEventController::index()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.l6hZplE" method="withContext"/>
+    </service>
+    <service id=".service_locator.GdQQJHX" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\EvenementController::delete" type="service_closure" id=".service_locator.sMofYe0.App\Controller\EvenementController::delete()"/>
@@ -5543,6 +5549,7 @@
         <argument key="App\Controller\LoginController::index" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::index()"/>
         <argument key="App\Controller\LoginController::logOut" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::logOut()"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.DQcw8Me.App\Controller\RegistrationController::register()"/>
+        <argument key="App\Controller\RenderEventController::index" type="service_closure" id=".service_locator.l6hZplE.App\Controller\RenderEventController::index()"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
@@ -5555,6 +5562,7 @@
         <argument key="App\Controller\LoginController:index" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::index()"/>
         <argument key="App\Controller\LoginController:logOut" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::logOut()"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.DQcw8Me.App\Controller\RegistrationController::register()"/>
+        <argument key="App\Controller\RenderEventController:index" type="service_closure" id=".service_locator.l6hZplE.App\Controller\RenderEventController::index()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
       </argument>
@@ -6883,7 +6891,7 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.1W6W_dF" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.xybBYQ9"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.GdQQJHX"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>

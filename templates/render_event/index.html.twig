@@ -54,5 +54,7 @@
     </div>
 {% endif %}
 </nav>
-
+ {% for evenement in evenements %}
+  {{ evenement.name }}
+ {% endfor %}
 {% endblock %}

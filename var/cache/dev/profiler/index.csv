@@ -1316,3 +1316,16 @@ bd8ca9,172.23.0.1,GET,https://localhost:8002/,1722238752,,200,request
 e2b0e7,172.23.0.1,GET,https://localhost:8002/render/salon?url=render%2Fsalon,1722238872,,200,request
 31ff9f,172.23.0.1,GET,https://localhost:8002/render/salon?url=render%2Fsalon,1722238873,,200,request
 8a82df,172.23.0.1,GET,https://localhost:8002/,1722238876,,200,request
+e16d0c,172.23.0.1,GET,https://localhost:8002/render/event?url=render%2Fevent,1722238930,,200,request
+90b033,172.23.0.1,GET,https://localhost:8002/render/event?url=render%2Fevent,1722239123,,200,request
+6951f2,172.23.0.1,GET,https://localhost:8002/render/login?url=render%2Flogin,1722240221,f639e4,404,request
+f639e4,172.23.0.1,GET,https://localhost:8002/render/login?url=render%2Flogin,1722240221,,404,request
+54e7bb,172.23.0.1,GET,https://localhost:8002/login?url=login,1722240229,,200,request
+28a907,172.23.0.1,POST,https://localhost:8002/login?url=login,1722240830,,302,request
+6847c7,172.23.0.1,GET,https://localhost:8002/,1722240830,,200,request
+84ded0,172.23.0.1,GET,https://localhost:8002/,1722240867,,200,request
+589f40,172.23.0.1,GET,https://localhost:8002/,1722242055,,200,request
+2bb854,172.23.0.1,GET,https://localhost:8002/render/event?url=render%2Fevent,1722245355,,200,request
+b592f9,172.23.0.1,GET,https://localhost:8002/,1722245361,,200,request
+d720f1,172.23.0.1,GET,https://localhost:8002/render/event?url=render%2Fevent,1722245362,,200,request
+dff842,172.23.0.1,GET,https://localhost:8002/,1722245373,,200,request
