@@ -444,6 +444,7 @@ Chez Shop'Tattoo, chaque tatouée bénéficie d’une expérience sur mesure. Si
   </div>
 </div>
 
-{% endblock %}", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
+{% endblock %}
+", "home/index.html.twig", "/var/www/Projet-Stage/templates/home/index.html.twig");
     }
 }
