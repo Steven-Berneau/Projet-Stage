@@ -16,7 +16,7 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerBPNRT4L\App_KernelDevDebugContainer([
     'container.build_hash' => 'BPNRT4L',
-    'container.build_id' => '6d2683f0',
-    'container.build_time' => 1721994689,
+    'container.build_id' => 'c43a48b4',
+    'container.build_time' => 1722238752,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerBPNRT4L');
