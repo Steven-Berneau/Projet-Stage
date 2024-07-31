@@ -71,7 +71,9 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
         // line 19
         yield "    </body>
-    <footer class=\"col d-flex align-items-center justify-content-center\">Copyright © 2024 – ShopTattoo – Site internet créé par FreeZy</footer>
+    <footer class=\"col d-flex align-items-center justify-content-center\">
+        Copyright © 2024 – ShopTattoo – Site internet créé par FreeZy
+    </footer>
 </html>
 ";
         
@@ -185,7 +187,7 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  165 => 18,  155 => 17,  141 => 12,  131 => 11,  117 => 8,  107 => 7,  87 => 5,  73 => 19,  71 => 17,  66 => 14,  64 => 11,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  167 => 18,  157 => 17,  143 => 12,  133 => 11,  119 => 8,  109 => 7,  89 => 5,  73 => 19,  71 => 17,  66 => 14,  64 => 11,  61 => 10,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -209,7 +211,9 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         {% block body %}
         {% endblock %}
     </body>
-    <footer class=\"col d-flex align-items-center justify-content-center\">Copyright © 2024 – ShopTattoo – Site internet créé par FreeZy</footer>
+    <footer class=\"col d-flex align-items-center justify-content-center\">
+        Copyright © 2024 – ShopTattoo – Site internet créé par FreeZy
+    </footer>
 </html>
 ", "base.html.twig", "/var/www/Projet-Stage/templates/base.html.twig");
     }
