@@ -12,9 +12,9 @@ class SalonType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('Name')
-            ->add('Description')
-            ->add('image')
+            ->add('Name', NULL, ['label_attr' => ['class' => 'link-light text-decoration-underline fw-bold']])
+            ->add('Description', NULL, ['label_attr' => ['class' => 'link-light text-decoration-underline fw-bold']])
+            ->add('image', NULL, ['label_attr' => ['class' => 'link-light text-decoration-underline fw-bold']])
         ;
     }
 

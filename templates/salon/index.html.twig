@@ -1,18 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Salon index{% endblock %}
+{% block title %}Gestion des rubriques{% endblock %}
 
 {% block body %}
-    <h1>Salon index</h1>
+    <h1 class="col d-flex align-items-center justify-content-center link-light text-decoration-underline">Liste des rubriques</h1>
+
+    <h2 class="d-grid gap-2 d-md-flex justify-content"> 
+        <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_admin') }}">Menu admin</a>
+    </h2>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>actions</th>
+                <th class="link-light text-decoration-underline">Id</th>
+                <th class="link-light text-decoration-underline">Nom</th>
+                <th class="link-light text-decoration-underline">Description</th>
+                <th class="link-light text-decoration-underline">Image</th>
+                <th class="link-light text-decoration-underline">actions</th>
             </tr>
         </thead>
         <tbody>
@@ -23,17 +27,17 @@
                 <td>{{ salon.Description }}</td>
                 <td>{{ salon.image }}</td>
                 <td>
-                    <a href="{{ path('app_salon_show', {'id': salon.id}) }}">show</a>
-                    <a href="{{ path('app_salon_edit', {'id': salon.id}) }}">edit</a>
+                    <a class="link-primary fw-bold btn btn-light bg-light" href="{{ path('app_salon_show', {'id': salon.id}) }}">Voir la rubrique</a>
+                    <a class="link-primary fw-bold btn btn-light bg-light" href="{{ path('app_salon_edit', {'id': salon.id}) }}">Editer la rubrique</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5" class="link-light fst-italic">Aucune rubrique trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_salon_new') }}">Create new</a>
+    <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_salon_new') }}">Créer une nouvelle rubrique</a>
 {% endblock %}

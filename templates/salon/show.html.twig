@@ -1,34 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Salon{% endblock %}
+{% block title %}{{ salon.Name }}{% endblock %}
 
 {% block body %}
-    <h1>Salon</h1>
+    <h1 class="col d-flex align-items-center justify-content-center link-light text-decoration-underline">Voir les rubriques</h1>
+
+    <h2 class="d-grid gap-2 d-md-flex justify-content">
+        <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_admin') }}">Menu admin</a>
+    </h2>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th class="link-light text-decoration-underline">Id</th>
                 <td>{{ salon.id }}</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th class="link-light text-decoration-underline">Nom</th>
                 <td>{{ salon.Name }}</td>
             </tr>
             <tr>
-                <th>Description</th>
+                <th class="link-light text-decoration-underline">Description</th>
                 <td>{{ salon.Description }}</td>
             </tr>
             <tr>
-                <th>Image</th>
+                <th class="link-light text-decoration-underline">Image</th>
                 <td>{{ salon.image }}</td>
             </tr>
         </tbody>
     </table>
+    <div class="d-grid gap-2 d-md-flex justify-content">
+    <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_salon_index') }}">Retourner à la liste des rubriques</a>
 
-    <a href="{{ path('app_salon_index') }}">back to list</a>
-
-    <a href="{{ path('app_salon_edit', {'id': salon.id}) }}">edit</a>
+    <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_salon_edit', {'id': salon.id}) }}">Editer la rubrique</a>
 
     {{ include('salon/_delete_form.html.twig') }}
 {% endblock %}

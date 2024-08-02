@@ -72,7 +72,7 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         // line 19
         yield "    </body>
     <footer class=\"col d-flex align-items-center justify-content-center\">
-        Copyright © 2024 – ShopTattoo – Site internet créé par FreeZy
+        Copyright © 2024 – ShopTattoo – Site web créé par FreeZy.
     </footer>
 </html>
 ";
@@ -212,7 +212,7 @@ class __TwigTemplate_5c3eb340da4a5768082ab28ab571f0d1 extends Template
         {% endblock %}
     </body>
     <footer class=\"col d-flex align-items-center justify-content-center\">
-        Copyright © 2024 – ShopTattoo – Site internet créé par FreeZy
+        Copyright © 2024 – ShopTattoo – Site web créé par FreeZy.
     </footer>
 </html>
 ", "base.html.twig", "/var/www/Projet-Stage/templates/base.html.twig");

@@ -1,13 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Salon{% endblock %}
+{% block title %}Edition de la rubrique{% endblock %}
 
 {% block body %}
-    <h1>Edit Salon</h1>
+    <h1 class="col d-flex align-items-center justify-content-center link-light text-decoration-underline">Editer la rubrique</h1>
 
-    {{ include('salon/_form.html.twig', {'button_label': 'Update'}) }}
+    <h2 class="d-grid gap-2 d-md-flex justify-content"> 
+        <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_admin') }}">Menu admin</a>
+    </h2>
 
-    <a href="{{ path('app_salon_index') }}">back to list</a>
+    {{ include('salon/_form.html.twig', {'button_label': 'Modifier les changements'}) }}
+
+    <a class="link-primary fw-bold btn btn-primary bg-light" href="{{ path('app_salon_index') }}">Retourner à la liste des rubriques</a>
 
     {{ include('salon/_delete_form.html.twig') }}
 {% endblock %}
